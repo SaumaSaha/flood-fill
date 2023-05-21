@@ -1,6 +1,5 @@
 const floodFill = ([y, x], grid) => {
-	if (grid[y][x] === 1 || grid[y][x] === 2 || grid[y][x] === undefined)
-		return [];
+	if (grid[y][x] === 1 || grid[y][x] === 2) return [];
 
 	grid[y][x] = 2;
 
