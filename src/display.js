@@ -17,7 +17,7 @@ const visualizeFlood = (frame, floodedPoints) => {
 	}, 500);
 };
 
-const render = (grid, floodedPoints) => {
+const render = (grid) => {
 	const frame = new Array(grid.length)
 		.fill(0)
 		.map(() => new Array(grid[0].length));
@@ -27,7 +27,8 @@ const render = (grid, floodedPoints) => {
 			frame[i][j] = colors[grid[i][j]];
 		}
 	}
-	visualizeFlood(frame, floodedPoints);
+	return frame;
 };
 
 exports.render = render;
+exports.visualizeFlood = visualizeFlood;
